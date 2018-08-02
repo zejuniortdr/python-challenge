@@ -11,8 +11,6 @@ class Autocomplete(Resource):
 	def get(self):
 		q = request.args.get('q', default = '', type = str)
 		limit = request.args.get('limit', default = 5, type = int)
-
-		print(limit)
 		return { 'patients': T.search(q, limit) }
 
 
