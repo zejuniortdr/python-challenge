@@ -6,6 +6,11 @@ Após baixarem os arquivos, é necessário conceder permissão de execução ao 
 chmod +x setup.sh run.sh
 ```
 
+### Execute o **setup.py**
+```bash
+./setup.sh
+```
+
 ### Para execução via terminal
 Após rodar o **setup.py**,  digite no terminal:
 ```bash
