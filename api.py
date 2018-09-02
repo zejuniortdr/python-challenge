@@ -7,14 +7,15 @@ api = Api(app)
 
 T = loaddata()
 
+
 class Autocomplete(Resource):
-	def get(self):
-		q = request.args.get('q', default = '', type = str)
-		limit = request.args.get('limit', default = 5, type = int)
-		return { 'patients': T.search(q, limit) }
+    def get(self):
+        q = request.args.get('q', default='', type=str)
+        limit = request.args.get('limit', default=5, type=int)
+        return {'patients': T.search(q, limit)}
 
 
 api.add_resource(Autocomplete, '/autocomplete/')
 
 if __name__ == '__main__':
-	app.run(debug=False)
+    app.run(debug=False)
